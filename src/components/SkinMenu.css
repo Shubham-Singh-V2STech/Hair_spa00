@@ -1,0 +1,26 @@
+/* reuse the same black border frame style */
+.skin-menu            { max-width:1250px; margin:3rem auto; background:#000; color:#fff; font-family:Georgia,serif }
+.skin-menu__img       { display:block; width:100% }
+
+/* price card */
+.skin-menu__card      { padding:3rem 2.5rem }
+.skin-menu__card h2   { margin:0 0 1.6rem; font-size:1.35rem; font-weight:600 }
+.skin-menu__card h4   { margin:1.7rem 0 .7rem; font-size:1.05rem; font-weight:600 }
+
+/* two-column table */
+.skin-menu__table     { display:flex; gap:3rem; margin-bottom:2rem }
+.skin-menu__col       { flex:1 1 50% }
+
+/* a single row */
+.skin-row             { display:flex; align-items:center; font-size:.95rem; margin:.36rem 0 }
+.skin-row__item       { white-space:nowrap }
+.skin-row__dots       { flex:1 1 100%; border-bottom:1px dashed #444; margin:0 .6rem }
+.skin-row__price      { white-space:nowrap }
+
+/* tag badge */
+.skin-tag             { font-size:.63rem; background:#b8860b; color:#000; padding:1px 6px; border-radius:4px; text-transform:uppercase; margin-right:4px }
+
+/* responsive */
+@media (max-width:768px){
+  .skin-menu__table   { flex-direction:column; gap:1.5rem }
+}

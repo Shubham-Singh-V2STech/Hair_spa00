@@ -1,0 +1,47 @@
+/* src/components/offerBlock.css */
+.offerBlock{
+  min-height:70vh;
+  background-position:center top;
+  background-size:cover;
+  display:flex;
+  align-items:flex-end;
+  color:#fff;
+}
+.offerBlock::before{         /* subtle dark overlay */
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,
+     rgba(0,0,0,.25) 0%,
+     rgba(0,0,0,.60) 60%);
+  pointer-events:none;
+}
+.offerBlock__inner{
+  position:relative;               /* above overlay */
+  margin:0 2rem 3rem;
+  padding:2.5rem 3rem;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.55);
+  max-width:900px;
+  line-height:1.75;
+  font-family:"Georgia",serif;
+}
+.offerBlock__inner h2{
+  margin:0 0 1rem;font-size:2rem;font-weight:700;
+}
+.offerBlock__inner p{margin-bottom:1rem}
+.bullets{list-style:disc;padding-left:1.25rem}
+.bullets li{margin-bottom:.4rem}
+
+/* ——— Responsive tweaks ——— */
+@media(max-width:1024px){
+  .offerBlock__inner{max-width:600px;padding:2rem}
+}
+@media(max-width:640px){
+  .offerBlock{min-height:60vh}
+  .offerBlock__inner{
+    margin:0 1rem 2rem;
+    padding:1.5rem;
+    font-size:.95rem;
+  }
+  .offerBlock__inner h2{font-size:1.6rem}
+}

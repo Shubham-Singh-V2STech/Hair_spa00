@@ -1,0 +1,109 @@
+/* ─────────  MAP + CARD LAYOUT  ───────── */
+.loc-wrapper {
+  background: #000;
+  padding-top: 90px;     /* leave room for fixed navbar */
+  color: #fff;
+  font-family: "Georgia", serif;
+}
+
+/* map frame */
+.loc-iframe {
+  width: 100%;
+  height: calc(100vh - 140px);   /* nice fit under navbar/padding */
+  border: 0;
+  display: block;
+}
+
+/* right-hand panel */
+.loc-panel {
+  padding: 0 18px;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+/* header bar */
+.loc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 4px 10px;
+}
+.loc-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+.loc-select {
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 14px;
+  background: #fff;
+  color: #000;
+  border: none;
+}
+
+/* location cards */
+.loc-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.loc-card {
+  background: #000;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  padding: 12px;
+}
+.loc-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+.loc-card p {
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+.loc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.loc-links a {
+  background: #fff;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: opacity .25s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+}
+.loc-wrapper .loc-links a {
+  color: #000 !important;
+}
+
+.nav-link
+ {
+    color: #000000 !important;
+}
+.loc-links a:hover { opacity: .85; }
+
+/* ─────────  SALON-INTERIOR VIDEO  ───────── */
+.salon-video {
+  padding: 90px 0 50px;      /* match other sections */
+  background: #000;
+}
+.salon-video__player {
+  width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+  display: block;
+}
+
+/* responsive tweaks */
+@media (max-width: 991px) {
+  .loc-iframe, .loc-panel { height: 360px; }
+}

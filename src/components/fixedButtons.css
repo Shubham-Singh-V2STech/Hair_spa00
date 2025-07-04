@@ -1,0 +1,40 @@
+/* src/components/fixedButtons.css */
+.fixedButton {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+.fixedButton .pill {
+  display: flex;
+  overflow: hidden;                 /* round corners crop karein */
+  border-radius: 9999px;            /* full pill */
+  background: #000;                 /* black pill bg */
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
+
+/* common anchor styles */
+.fixedButton .pill a {
+  width: 46px;                      /* square half-pill */
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform .2s;
+}
+
+/* vertical divider */
+.fixedButton .pill a:first-child {
+  border-right: 1px solid rgba(255,255,255,.25);
+}
+
+.fixedButton .pill a:hover {
+  transform: scale(1.1);
+}
+.fixedButton .pill a:active {
+  transform: scale(0.95);
+}

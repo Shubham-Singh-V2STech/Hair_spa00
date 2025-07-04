@@ -1,0 +1,236 @@
+/* ── frame matches other black sections ─────────── */
+.booking {
+  max-width: 1250px;
+  margin: 3rem auto;
+  background: #000;
+  color: #fff;
+  padding: 3rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem 4rem;
+  font-family: Georgia, serif;
+}
+
+/* text blocks */
+.booking__copy h3,
+.booking__hours h3 {
+  margin: 0 0 .6rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+.booking__copy p { margin: 0; font-size: .9rem; line-height: 1.6; }
+.booking__hours ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+/* form */
+.booking__form { grid-column: 1 / -1; }
+.form-title   { text-align: center; margin: 0 0 1.6rem; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.full { width: 100%; margin-bottom: 1.2rem; }
+
+input, select, textarea {
+  width: 100%;
+  padding: .65rem .8rem;
+  border: 1px solid #444;
+  background: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: .9rem;
+}
+input::placeholder, textarea::placeholder { color:#888; }
+select option { color:#000; }   /* dropdown items */
+
+button {
+  display:block;
+  margin: 1.8rem auto 0;
+  padding: .7rem 3.5rem;
+  border: 1px solid #fff;
+  background: transparent;
+  color:#fff;
+  font-family: inherit;
+  cursor:pointer;
+  transition: background .25s;
+}
+button:hover { background:#fff; color:#000; }
+
+@media (max-width:768px){
+  .grid-2{ grid-template-columns:1fr; }
+}
+/* === main wrapper ===================================================== */
+.booking.border-frame {
+  max-width: 1250px;
+  margin: 3rem auto;
+  padding: 3rem 2.5rem;
+  background: #000;
+  color: #fff;
+  border: 1px solid #222;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem 4rem;
+  font-family: Georgia, serif;
+}
+
+/* ——— left & right text blocks ——— */
+.booking__copy h3,
+.booking__hours h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.booking__copy p,
+.booking__hours ul {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.booking__hours ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inline-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ——— form ——— */
+.booking__form {
+  grid-column: 1 / -1; /* stretch full width */
+}
+
+.form-title {
+  text-align: center;
+  margin: 0 0 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+form {
+  width: 100%;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.full {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+/* labels + fields */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background: transparent;
+  padding: 0.65rem 0.8rem;
+  border: none;
+  border-bottom: 1px solid #555;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+select option {
+  color: #000; /* visible in dropdown */
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* submit button */
+button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.7rem 3.6rem;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* —— mobile —— */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+/* overall frame borrowed from .border-frame */
+.booking {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+  background: #000;
+  color: #fff;
+}
+
+.booking__copy,
+.booking__hours      { flex: 1 1 280px; font-family: Georgia, serif; }
+.booking__form       { flex: 1 1 100%; }
+
+/* list bullets */
+.booking__hours ul { list-style: disc; padding-left: 1.2rem; line-height: 1.8; }
+
+/* simple grid helpers */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.full   { width: 100%; margin-bottom: 1rem; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid #555;
+  background: transparent;
+  color: #fff;
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
+
+textarea { resize: vertical; }
+
+button {
+  display: block;
+  margin: 0.5rem auto 0;
+  padding: 0.7rem 2.5rem;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* responsive tweaks */
+@media(max-width: 768px){
+  .booking__hours { order: -1 }      /* hours beneath copy */
+  .grid-2         { grid-template-columns: 1fr; }
+}

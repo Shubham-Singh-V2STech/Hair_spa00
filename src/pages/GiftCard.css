@@ -1,0 +1,83 @@
+/* ───────── layout ───────── */
+.gift-wrapper{
+  display:flex;
+  flex-wrap:wrap;
+  background:#000;
+  color:#fff;
+  padding-top:90px;          /* clears fixed navbar */
+  min-height:100vh;
+  font-family:"Georgia",serif;
+}
+
+/* left image */
+.gift-img-col{
+  flex:1 1 55%;
+  min-width:320px;
+}
+.gift-img-col img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* right column */
+.gift-form-col{
+  flex:1 1 45%;
+  min-width:320px;
+  padding:0 46px 60px;
+}
+.gift-form-col h1{ font-size:2rem; margin:0 0 1.4rem }
+.lead{ line-height:1.55; margin-bottom:1.15rem }
+
+/* form styling */
+.gift-form-col form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.gift-form-col input,
+.gift-form-col select,
+.gift-form-col textarea{
+  background:transparent;
+  color:#fff;
+  font-size:15px;
+  padding:8px 4px;
+  border:none;
+  border-bottom:1px solid #444;
+}
+.gift-form-col input:focus,
+.gift-form-col select:focus,
+.gift-form-col textarea:focus{
+  outline:none;
+  border-bottom-color:#fff;
+}
+
+/* amount prefix */
+.amount-wrap{ position:relative }
+.amount-wrap .rupee{
+  position:absolute;
+  left:0; top:50%; transform:translateY(-50%);
+  pointer-events:none;
+}
+.amount-wrap input{ padding-left:16px }
+
+/* button */
+.gift-form-col button{
+  align-self:flex-start;
+  background:#0d57d7;
+  border:none;
+  border-radius:32px;
+  color:#fff;
+  padding:10px 34px;
+  font-size:15px;
+  cursor:pointer;
+  transition:opacity .25s;
+}
+.gift-form-col button:hover{ opacity:.85 }
+
+/* ───────── responsive ───────── */
+@media(max-width:768px){
+  .gift-img-col{ order:-1 }             /* image below text on small screens */
+  .gift-form-col{ padding:0 28px 60px }
+  .gift-form-col button{ width:100%; text-align:center }
+}

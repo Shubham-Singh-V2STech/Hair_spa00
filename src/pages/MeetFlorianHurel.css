@@ -1,0 +1,95 @@
+/* thin gold-brown hairline like other sections                           */
+.border-frame {
+  border: 1px solid #222;      /* change colour if you use a gold var   */
+  max-width: 1600px;
+  margin: 3rem auto;
+}
+
+/* main wrapper */
+.florian {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 4rem 3rem;
+  background: #000;
+  color: #fff;
+  font-family: "Georgia", serif;
+  
+}
+
+/* copy column */
+.florian__copy           { flex: 1 1 520px }
+.florian__copy h1        { font-size: 2.35rem; margin: 0 0 .45rem }
+.florian__copy h3        { font-size: 1.15rem; font-weight: 600; margin: 0 0 1.8rem }
+.florian__copy h2        { font-size: 1.4rem;  margin: 2.4rem 0 1rem }
+.florian__copy p         { line-height: 1.7; margin-bottom: 1.2rem }
+
+/* image column */
+.florian__img-wrap       { flex: 1 1 420px; display: flex; justify-content: flex-end }
+.florian__img            { width: 100%; max-width: 520px; object-fit: cover }
+
+/* responsive */
+@media (max-width:1024px){ .florian{padding:3rem 2rem} }
+@media (max-width:768px){
+  .florian__img-wrap{ order:-1; justify-content:center }
+  .florian__img     { max-width:380px }
+}
+/* ─────────── ABOUT-FLORIAN STRIP ─────────── */
+.about-florian {
+  background: #000;
+  color: #fff;
+  padding: 0;                  /* we’re handling padding inside */
+}
+
+/* full-width image */
+.about-florian__img-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.about-florian__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* boxed text underneath */
+.about-florian__copy {
+  max-width: 1400px;
+  margin: 2rem auto 4rem;     /* space above + below */
+  padding: 2rem 1.5rem;
+  border: 1px solid #fff;      /* thin white border */
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+}
+.about-florian__copy h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-florian__copy p {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* responsive adjustments */
+@media (max-width: 992px) {
+  .about-florian__copy {
+    margin: 1.5rem auto 3rem;
+    padding: 1.5rem;
+  }
+  .about-florian__copy h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-florian__copy {
+    margin: 1rem auto 2rem;
+    padding: 1rem;
+  }
+  .about-florian__copy h2 {
+    font-size: 1.6rem;
+  }
+  .about-florian__copy p {
+    font-size: 0.9rem;
+  }
+}

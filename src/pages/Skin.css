@@ -1,0 +1,180 @@
+/* ---------- HERO ---------- */
+.skin-hero {
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+.skin-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+.skin-hero__inner {
+  position: relative;
+  margin-left: 6%;
+  max-width: 680px;
+  font-family: "Georgia", serif;
+  line-height: 1.3;
+}
+.skin-hero__title    { margin: 0 0 .5rem; font-size: 2.8rem; font-weight: 600; }
+.skin-hero__subtitle { margin: 0; font-size: 1.4rem; }
+
+/* ---------- WHY CHOOSE BLOCK ---------- */
+.border-frame {
+  border: 1px solid #222;
+  padding: 3rem 2rem;
+  background: #000;
+  color: #fff;
+  max-width: 1250px;
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.skin-why__copy  { flex: 1 1 55%; min-width: 300px; }
+.skin-why__media { flex: 1 1 40%; min-width: 260px; }
+
+/* ──── Catalogue download row (icon + text + hair-line) ──── */
+.dl-link{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;                     /* space between icon & text   */
+  font-family:"Georgia",serif;
+  font-size:1.25rem;
+  font-weight:600;
+  text-decoration:none;
+  color:#fff;
+  width:100%;                     /* stretch so the hair-line runs full-width */
+  padding-bottom:1.15rem;         /* space above the hair-line                */
+  border-bottom:1px solid rgba(255,255,255,.25);
+}
+
+.dl-link i{ font-size:1.1rem; }   /* slightly smaller arrow icon */
+
+/* ──── Book-an-Appointment pill button ──── */
+.ba-btn{
+  display:inline-block;
+  margin-top:2.2rem;              /* distance from hair-line */
+  padding:.75rem 2.25rem;
+  font-family:"Georgia",serif;
+  font-size:1.05rem;
+  font-weight:600;
+  border:1px solid #fff;
+  border-radius:9999px;
+  background:transparent;
+  color:#fff;
+  transition:background .25s, color .25s;
+}
+.ba-btn:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* — mobile tweak: make the pill span full-width for easier tapping — */
+@media(max-width:576px){
+  .ba-btn{display:block;width:100%;text-align:center}
+}
+
+
+.skin-video { width: 100%; border-radius: 8px; }
+
+/* ---------- QUICK TIPS BODY ---------- */
+.skin-body { padding: 2rem; font-family: Arial, sans-serif; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 991px) {
+  .skin-hero { height: 46vh; }
+  .skin-hero__title   { font-size: 2.2rem; }
+  .skin-hero__subtitle{ font-size: 1.15rem; }
+
+  .border-frame { flex-direction: column; }
+  .skin-why__media { order: -1; }          /* video first on tablets */
+}
+
+@media (max-width: 576px) {
+  .skin-hero { height: 34vh; }
+  .skin-hero__inner { margin-left: 4%; }
+  .skin-hero__title   { font-size: 1.8rem; }
+  .skin-hero__subtitle{ font-size: .95rem; line-height: 1.4; }
+
+  .border-frame { padding: 2rem 1.2rem; }
+  .ba-btn       { width: 100%; text-align: center; }
+}
+/* ============ HERO ============ */
+.skin-hero{
+  height:90vh; background:center/cover no-repeat;
+  position:relative; display:flex; align-items:center; color:#fff;
+}
+.skin-hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.skin-hero__inner{position:relative;margin-left:6%;max-width:680px;font-family:Georgia,serif}
+.skin-hero__title{margin:0 0 .5rem;font-size:2.75rem;font-weight:600}
+.skin-hero__subtitle{margin:0;font-size:1.35rem;line-height:1.35}
+
+/* ============ WHY CHOOSE + CAROUSEL ============ */
+.border-frame{
+  border:1px solid #222;background:#000;color:#fff;
+  max-width:1250px;margin:3rem auto;display:flex;flex-wrap:wrap;gap:2rem;
+  padding:3rem 2rem
+}
+.skin-why__copy {flex:1 1 55%;min-width:300px}
+.skin-why__media{flex:1 1 40%;min-width:260px}
+.skin-bullets{list-style:disc;padding-left:1.25rem;line-height:1.8;margin-bottom:2rem}
+.dl-link{display:inline-flex;align-items:center;color:#fff;text-decoration:none;margin-bottom:1.25rem}
+.ba-btn{display:inline-block;padding:.7rem 1.6rem;border:1px solid #fff;border-radius:9999px;background:transparent;color:#fff}
+.skin-video{width:100%;border-radius:8px}
+
+/* ============ WHAT WE OFFER ============ */
+.skin-offer{max-width:1250px;margin:3rem auto;font-family:Georgia,serif}
+.skin-offer__img{display:block;width:100%;border:1px solid #222}
+.skin-offer__frame{
+  background:#000;color:#fff;border:1px solid #222;border-top:none;
+  padding:3rem 2.5rem;line-height:1.7
+}
+.skin-offer__title{margin:0 0 1rem;font-size:2rem;font-weight:700}
+.skin-offer__bullets{list-style:disc;padding-left:1.25rem;margin:1.25rem 0}
+
+/* ============ BODY COPY ============ */
+.skin-body{padding:2rem;font-family:Arial,Helvetica, sans-serif}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:991px){
+  .skin-hero{height:40vh}
+  .skin-hero__title{font-size:2.2rem}
+  .skin-hero__subtitle{font-size:1.1rem}
+  .border-frame{flex-direction:column}
+  .skin-why__media{order:-1}
+  .skin-offer__frame{padding:2rem 1.5rem}
+}
+@media(max-width:576px){
+  .skin-hero{height:32vh}
+  .skin-hero__title{font-size:1.7rem}
+  .skin-hero__subtitle{font-size:.95rem}
+  .skin-offer__title{font-size:1.6rem}
+  .ba-btn{width:100%;text-align:center}
+}
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .appointment-btn {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .ba-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 50px;
+  }
+  .ba-btn:hover {
+    background-color: #fff;
+    color: #000;
+  }

@@ -1,0 +1,182 @@
+/* Hero Banner */
+.hero-banner {
+  position: relative;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 80px;
+  color: #fff;
+}
+
+.hero-overlay {
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-banner h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.hero-banner p {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    height: 60vh !important;
+  }
+  .hero-banner h1 {
+    font-size: 2rem !important;
+  }
+  .hero-banner p {
+    font-size: 1rem !important;
+  }
+}
+
+/* Image Slider */
+.swiper-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.swiper-slide {
+  flex: 0 0 100%;
+}
+
+.model-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Pagination Bullets */
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #555;
+  transition: background-color 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+/* Text + Form Section */
+.form-sec {
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  height: 100%;
+}
+
+.main-title h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hairstyle-pointer {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hairstyle-pointer li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #ccc;
+}
+
+/* Catalogue Link */
+.download_hair_pdf ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.download_hair_pdf ul li {
+  padding: 15px 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #343434;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Georgia', serif;
+}
+
+.download_hair_pdf ul li i {
+  font-size: 16px;
+}
+
+/* CTA Button */
+.ba-btn {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ba-btn:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .form-sec {
+    padding: 20px;
+  }
+  .main-title h2 {
+    font-size: 1.5rem;
+  }
+  .ba-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Offer Box Border */
+.nail-offer-box {
+  border: 1px solid #333;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+.nail-offer-box h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 10px;
+  background-color: #222;
+}
+
+/* Base Row Gutter Adjustment (optional if needed) */
+.row {
+  --bs-gutter-x: -0.5rem;
+  --bs-gutter-y: 0;
+}
